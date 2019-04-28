@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/66f820fb-dc8b-47b8-a8c8-49fdd4f7e5d9/resourceGroups/testeateliware/providers/Microsoft.Web/sites/testeateliware",
+    "appService.deploySubpath": "dist"
+}

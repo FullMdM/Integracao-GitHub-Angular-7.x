@@ -14,7 +14,7 @@ export class RepositoryService extends BaseService {
         return this.http.get<any>(`${this.apiUrl}v1/repository/${id}`).pipe(map(result => result.data));
     }
 
-    getList() {
-        return this.http.get<any>(`${this.apiUrl}v1/listrepositories`).pipe(map(result => result.data));
+    getList(language: number, term: string, page: number) {
+        return this.http.get<any>(`${this.apiUrl}v1/listrepositories/${language}/${page}?term=${term}`).pipe(map(result => result.data));
     }
 }

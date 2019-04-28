@@ -1,7 +1,31 @@
-<main role="main" class="inner cover text-center">
-    <h1 class="cover-heading">Olá.</h1>
-    <p class="lead">Busque repositórios no GitHub clicando no botão abaixo</p>
-    <p class="lead">
-        <a [routerLink]="['/repository']" class="btn btn-lg btn-secondary">Buscar Repositórios</a>
-    </p>
-</main>
+<form [formGroup]="filtroForm" (ngSubmit)="searchRepositories()">
+    <main role="main" class="inner cover text-center">
+        <h1 class="cover-heading">Olá.</h1>
+        <p class="lead">Busque repositórios no GitHub clicando no botão abaixo</p>
+
+        <div class="row">
+            
+            <div class="col form-group">
+                <label for="linguagem" for="linguagem">Linguagem</label>
+                <select id="linguagem" formControlName="language" class="form-control">
+                    <option *ngFor="let l of languages" [ngValue]="l.value">
+                        {{l.name}}
+                    </option>
+                </select>
+            </div>
+
+        <!-- 
+            <label for="linguagem">Linguagem</label>
+            <input type="text" class="form-control" id="linguagem" formControlName="language"> -->
+
+        <div class="col form-group">
+            <label for="palavraChave">Palavra-chave</label>
+            <input type="text" id="palavraChave" formControlName="term" class="form-control" placeholder="Termo">
+        </div>
+        </div>
+
+        <p class="lead2">
+            <button type="submit" class="btn btn-lg btn-secondary">Buscar Repositórios</button>
+        </p>
+    </main>
+</form>

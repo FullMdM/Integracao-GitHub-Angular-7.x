@@ -1,0 +1,15 @@
+div {
+    color: #333333;
+}
+
+.card-header {
+    border-bottom: 2px solid rgb(167, 0, 0);
+}
+
+.card-body {
+    border-bottom: 2px solid rgb(167, 0, 0);
+}
+
+.card-text {
+    margin-bottom: 2px;
+}

@@ -1,0 +1,12 @@
+<div class="card" *ngIf="repository != null">
+    <h5 class="card-header">Repositório {{repository["id"]}}</h5>
+    <div *ngFor="let item of propertyNames">
+        <div *ngIf="repository[item] != null && !isNestedObject(item)">
+            <p class="card-text"><strong>{{item}} - </strong>{{repository[item]}}</p>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="repository == null">
+    Repositório não encontrado.
+</div>

@@ -7,6 +7,7 @@ const routes: Routes = [
         path: "", component: RepositoryComponent,
         children: [
             // { path: "repository-details/:id", loadChildren: "..\/repository-details\/repository-details.module#RepositoryDetailsModule" },
+            // { path: "repository-details/:id", loadChildren: "../repository-details/repository-details.module#RepositoryDetailsModule" },
         ]
     }];
 

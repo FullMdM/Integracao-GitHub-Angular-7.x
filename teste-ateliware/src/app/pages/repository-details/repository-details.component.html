@@ -1,10 +1,10 @@
-<div class="card" *ngIf="repository != null">
-    <h5 class="card-header">Repositório {{repository["id"]}}</h5>
-    <div *ngFor="let item of propertyNames">
-        <div *ngIf="repository[item] != null && !isNestedObject(item)">
-            <p class="card-text"><strong>{{item}} - </strong>{{repository[item]}}</p>
+<div *ngIf="repository != null">
+    <h5 style="color: #fff">Repositório {{repository["id"]}}</h5>
+    <ul class="list-group list-group-flush">
+        <div col *ngFor="let item of propertyNames">
+            <li *ngIf="repository[item] != null && !isNestedObject(item)" class="customLi"><strong>{{item}} - </strong>{{repository[item]}}</li>
         </div>
-    </div>
+    </ul>
 </div>
 
 <div style="color: white;" *ngIf="repository == null">

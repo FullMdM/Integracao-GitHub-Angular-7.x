@@ -13,3 +13,21 @@ div {
 .card-text {
     margin-bottom: 2px;
 }
+
+li {
+    border-bottom: 2px solid #dee2e6;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(222, 226, 230);
+    background-color: #333;
+}
+
+.customLi {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #333;
+    border: 1px solid rgb(222, 226, 230);
+    color: #dee2e6;
+}

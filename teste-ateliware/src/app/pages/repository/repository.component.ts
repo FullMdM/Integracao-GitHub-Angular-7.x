@@ -12,6 +12,7 @@ export class RepositoryComponent implements OnInit {
     language: number;
     term: string;
     repositories: Repository[];
+    page: number = 1; 
 
     constructor(private _route: Router, private _repositoryService: RepositoryService, private route: ActivatedRoute) {
     }
@@ -21,7 +22,7 @@ export class RepositoryComponent implements OnInit {
             this.language = +params['language'];
             this.term = params['term'];
 
-            this._repositoryService.getList(this.language, this.term, 1).subscribe((result: Repository[]) => {
+            this._repositoryService.getList(this.language, this.term, this.page).subscribe((result: Repository[]) => {
                 this.repositories = result;
             });
         });

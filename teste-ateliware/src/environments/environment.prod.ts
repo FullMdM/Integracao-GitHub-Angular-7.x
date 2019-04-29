@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://testeateliwareapi.azurewebsites.net/',
+  apiUrl: 'https://testeateliwareapi.azurewebsites.net/',
   ambiente: 'prod',
 };

@@ -1,8 +1,10 @@
 <div *ngIf="repository != null">
-    <h5 style="color: #fff">Repositório {{repository["id"]}}</h5>
+    <h5 style="color: #fff">Repositório {{repository["id"]}} <a [href]="repository['htmlUrl']" target="_blank"
+            style="float: right;">Ver no GitHub</a></h5>
     <ul class="list-group list-group-flush">
         <div col *ngFor="let item of propertyNames">
-            <li *ngIf="repository[item] != null && !isNestedObject(item)" class="customLi"><strong>{{item}} - </strong>{{repository[item]}}</li>
+            <li *ngIf="repository[item] != null && !isNestedObject(item)" class="customLi"><strong>{{item}} -
+                </strong>{{repository[item]}}</li>
         </div>
     </ul>
 </div>

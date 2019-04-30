@@ -6,6 +6,7 @@
             <th scope="col">Linguagem</th>
             <th scope="col">Data de criação</th>
             <th scope="col"></th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody *ngFor="let repository of repositories">
@@ -18,10 +19,12 @@
                     style="background-color: #343a40; color: #fff;" tabindex="-1" role="button"
                     aria-disabled="true">Detalhes</a>
             </td>
+            <td><a target="_blank" [href]="repository.htmlUrl" class="btn btn-secondary"
+                style="background-color: #343a40; color: #fff;" tabindex="-1" role="button"
+                aria-disabled="true">Ver no GitHub</a>
+        </td>
         </tr>
     </tbody>
 </table>
-
-<ngb-pagination [(page)]="page" [pageSize]="6" [collectionSize]="repositories.length"></ngb-pagination>
 
 <h2 *ngIf="repositories != null && repositories.length == 0">Nenhum resultado encontrado! :(</h2>
